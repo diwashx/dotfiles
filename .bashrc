@@ -1,1 +1,0 @@
-/home/diwash/dotfiles/bashrc
