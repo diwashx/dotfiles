@@ -8,7 +8,8 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run
+        exec rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi
+#	dmenu_run
 
 #firefox
 super + c
