@@ -1,3 +1,4 @@
+#include-file= ~/.config/polybar/modules.ini
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #331E1E1E
@@ -40,7 +41,9 @@ font-2 = siji:style=Regular:pixelsize=24;2
 font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
-
+font-6 = Montserrat:weight=SemiBold:size=10;2
+font-7 = FiraCode Nerd Font:size=12;1.5
+font-8 = Montserrat:weight=Medium:size=10;2
 modules-left = pacman-updates
 modules-center = bspwm 
 modules-right =pulseaudio wlan battery date powermenu
@@ -66,8 +69,8 @@ eursor-scroll = ns-resize
 
 [bar/external]
 monitor = HDMI-1
-modules-left =
-modules-center = bspwm
+modules-left = shot mpd
+modules-center = bspwm shot
 modules-right = pulseaudio
 
 
@@ -86,14 +89,6 @@ format-prefix-foreground = #ffbb00
 type = internal/xwindow
 label = %title:0:30:...%
 format = <label>
-
-#[module/spotify]
-#type = custom/script
-#interval = 1
-#format-prefix = " "
-#format = <label>
-#exec = python /home/ermanno/.config/scripts/spotify_status.py -f '{artist}: {song}'
-#format-underline = #1db954
 
 
 [module/bspwm]
@@ -398,6 +393,7 @@ menu-0-1 = power off
 menu-0-1-exec = systemctl poweroff
 
 
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -405,6 +401,13 @@ screenchange-reload = true
 ;compositing-foreground = source
 ;compositing-border = over
 ;pseudo-transparency = false
+
+[module/shot]
+type = custom/script
+exec = echo ""
+click-left = "flameshot screen -p ~/Downloads/"
+click-right = "flameshot gui"
+   
 
 [global/wm]
 margin-top = 5
