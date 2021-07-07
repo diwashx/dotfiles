@@ -71,7 +71,7 @@ eursor-scroll = ns-resize
 monitor = HDMI-1
 modules-left = shot mpd
 modules-center = bspwm shot
-modules-right = pulseaudio
+modules-right = pulseaudio polypomo
 
 
 [module/pacman-updates]
@@ -408,7 +408,21 @@ exec = echo ""
 click-left = "flameshot screen -p ~/Downloads/"
 click-right = "flameshot gui"
    
+[module/polypomo]
+type = custom/script
 
+exec = /home/diwash/polypomo/polypomo
+tail = true
+
+label = %output%
+click-left = python /home/diwash/polypomo/polypomo toggle
+click-right = python /home/diwash/polypomo/polypomo end
+click-middle =  python /home/diwash/polypomo/polypomo lock
+scroll-up =python  /home/diwash/polypomo/polypomo time +60
+scroll-down = python /home/diwash/polypomo/polypomo time -60
+
+font-0 = fixed:pixelsize=10;1
+font-1 = Noto Emoji:scale=15:antialias=false;0
 [global/wm]
 margin-top = 5
 margin-bottom = 5
