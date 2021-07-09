@@ -27,6 +27,7 @@ set statusline+=%#DiffText#
 set statusline+=\ %l/%L
 set statusline+=\ [%c]
 set virtualedit+=block
+set nohlsearch
 
 "key bindings
 let mapleader=" "
