@@ -4,6 +4,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'morhetz/gruvbox'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
 call plug#end() 
 
 
@@ -39,6 +40,10 @@ nnoremap <leader>z : set invrnu invnu<CR>
 nnoremap <leader><C-l> :set nofoldenable<CR>
 nnoremap <C-l> :set foldmethod=indent<CR>
 nnoremap <C-k> :set foldmethod=syntax<CR>
+
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 
 nnoremap <Up> <nop>
