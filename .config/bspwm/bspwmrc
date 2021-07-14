@@ -6,7 +6,7 @@ $HOME/.config/polybar/launch.sh
 
 
 bspc monitor eDP-1 -d I II III IV V 
-bspc monitor HDMI-1 -d VI VII VIII IX
+bspc monitor HDMI-1 -d VI VII VIII IX X 
 
 bspc config border_width         2
 bspc config window_gap          12

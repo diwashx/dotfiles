@@ -14,7 +14,7 @@ set splitbelow
 set splitright
 set shiftwidth=4 tabstop=4 softtabstop=4 autoindent smartindent expandtab
 set wildmode=longest,list,full
-
+set noswapfile
 
 "Statusline
 set statusline=
