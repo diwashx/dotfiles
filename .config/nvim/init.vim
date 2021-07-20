@@ -1,4 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
+Plug 'vimwiki/vimwiki'
+"Plug 'tbabej/taskwiki'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'morhetz/gruvbox'
@@ -15,6 +17,20 @@ set splitright
 set shiftwidth=4 tabstop=4 softtabstop=4 autoindent smartindent expandtab
 set wildmode=longest,list,full
 set noswapfile
+set nocompatible
+filetype plugin on
+syntax on
+
+"vimwiki
+syntax on
+let g:vimwiki_list= [{'path':'~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_ext2syntax= {'.md' : 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+
+"Makes vimwiki markdown links as [text](text.md) instead of [text](text)
+let g:vimwiki_markdown_link_ext = 1
+
+let g:taskwiki_markup_syntax = 'markdown'
+let g:markdown_folding = 1
 
 "Statusline
 set statusline=
@@ -29,7 +45,8 @@ set statusline+=\ %l/%L
 set statusline+=\ [%c]
 set virtualedit+=block
 set nohlsearch
-
+set linebreak
+set nocompatible
 "key bindings
 let mapleader=" "
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>

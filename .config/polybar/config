@@ -184,7 +184,7 @@ format = <label> <bar>
 label = BL
 
 bar-width = 10
-bar-indicator = |
+bar-indiator = |
 bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
@@ -430,5 +430,4 @@ font-1 = Noto Emoji:scale=15:antialias=false;0
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini
-
+; vim:ft=dosinic

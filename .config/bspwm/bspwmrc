@@ -5,7 +5,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh
 
 
-bspc monitor eDP-1 -d I II III IV V 
+bspc monitor eDP-1 -d I II III IV V  
 bspc monitor HDMI-1 -d VI VII VIII IX X 
 
 bspc config border_width         2
@@ -21,6 +21,6 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-
+xsetroot -cursor_name left_ptr &
 picom -f & 
 nitrogen --restore
