@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vimwiki/vimwiki'
-"Plug 'tbabej/taskwiki'
+Plug 'tbabej/taskwiki'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'morhetz/gruvbox'

@@ -1,7 +1,7 @@
 #include-file= ~/.config/polybar/modules.ini
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #331E1E1E
+background = #000
 background-alt = #bf1e1e1e
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
@@ -44,7 +44,6 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 font-6 = Montserrat:weight=SemiBold:size=10;2
 font-7 = FiraCode Nerd Font:size=12;1.5
 font-8 = Montserrat:weight=Medium:size=10;2
-modules-left = pacman-updates
 modules-center = bspwm 
 modules-right =pulseaudio wlan battery date powermenu
 
@@ -69,7 +68,7 @@ eursor-scroll = ns-resize
 
 [bar/external]
 monitor = HDMI-1
-modules-left = shot mpd
+modules-left = shot mpd pacman-updates
 modules-center = bspwm shot
 modules-right = pulseaudio polypomo
 
@@ -81,7 +80,7 @@ foreground = ${colors.foreground}
 type = custom/script
 exec = checkupdates | wc -l
 interval = 1000
-label = Updates: %output%
+label = %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "

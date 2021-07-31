@@ -15,6 +15,13 @@ super + @space
 super + c
 	firefox
 
+#for vimwiki
+super + alt + v
+    firefox ~/vimwiki/mdwiki.html
+
+super + v
+    kitty nvim
+
 #dolphin
 super + x
 	dolphin
