@@ -6,6 +6,8 @@ Plug 'junegunn/limelight.vim'
 Plug 'morhetz/gruvbox'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
 call plug#end() 
 
@@ -63,6 +65,12 @@ nmap <M-s> <Plug>MarkdownPreviewStop
 nmap <C-p> <Plug>MarkdownPreviewToggle
 
 
+
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+
+
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
 nnoremap <Left> <nop>
@@ -85,12 +93,18 @@ function! s:goyo_enter()
   set noshowcmd
   set scrolloff=999
   Limelight
+
+  hi! Normal ctermbg=NONE guibg=NONE
+  hi! NonText ctermbg=None guibg=NONE guifg=NONE ctermfg=NONE
 endfunction
 
 function! s:goyo_leave()
   set showmode
   set showcmd
   set scrolloff=5
+
+  hi! Normal ctermbg=NONE guibg=NONE
+  hi! NonText ctermbg=None guibg=NONE guifg=NONE ctermfg=NONE
   Limelight!
 endfunction
 
