@@ -1,7 +1,7 @@
 #include-file= ~/.config/polybar/modules.ini
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #000
+background = #71A6D2
 background-alt = #bf1e1e1e
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
@@ -11,7 +11,7 @@ secondary = #ffffff
 alert = #bd2c40
 
 [bar/example]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 20
 ;offset-x = 1%
@@ -67,7 +67,7 @@ cursor-click = pointer
 eursor-scroll = ns-resize
 
 [bar/external]
-monitor = HDMI-1
+monitor = eDP-1
 modules-left = shot mpd pacman-updates
 modules-center = bspwm shot
 modules-right = pulseaudio polypomo

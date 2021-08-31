@@ -3,7 +3,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'tbabej/taskwiki'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'cocopon/iceberg.vim'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-markdown' | Plug 'ap/vim-css-color'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
@@ -79,7 +80,7 @@ xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
 "colorsettings
-colorscheme gruvbox
+colorscheme iceberg
 set termguicolors
 set background=dark
 let g:limelight_conceal_ctermfg = 240
